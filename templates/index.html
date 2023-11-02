@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Eligibility Prediction</title>
+</head>
+<body>
+    <h1>Credit Card Eligibility Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="age">Age: </label>
+        <input type="text" name="age"><br>
+
+        <label for="experience">Experience (yrs): </label>
+        <input type="text" name="experience"><br>
+
+        <label for="income">Income: </label>
+        <input type="text" name="income"><br>
+
+        <label for="zip_code">ZIP Code: </label>
+        <input type="text" name="zip_code"><br>
+
+        <label for="family">Family members: </label>
+        <input type="text" name="family"><br>
+
+        <label for="ccavg">CCAvg: </label>
+        <input type="text" name="ccavg"><br>
+
+        <label for="education">Education (1 for Undergraduate, 2 for Graduate, 3 for Advanced/Professional): </label>
+        <input type="text" name="education"><br>
+
+        <label for="mortgage">Mortgage: </label>
+        <input type="text" name="mortgage"><br>
+
+        <label for="personal_loan">Personal Loan (0 for No, 1 for Yes): </label>
+        <input type="text" name="personal_loan"><br>
+
+        <label for="securities_account">Securities Account (0 for No, 1 for Yes): </label>
+        <input type="text" name="securities_account"><br>
+
+        <label for="cd_account">CD Account (0 for No, 1 for Yes): </label>
+        <input type="text" name="cd_account"><br>
+
+        <label for="online">Online (0 for No, 1 for Yes): </label>
+        <input type="text" name="online"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_result %}
+    <p><strong>Prediction Result:</strong> {{ prediction_result }}</p>
+    {% endif %}
+</body>
+</html>
